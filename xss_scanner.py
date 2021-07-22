@@ -26,3 +26,7 @@ if not '{fuzz}' in args.url:
 else:
     target = args.url
 wordlist = args.wordlist
+
+for payload in open(wordlist, "r").readlines():
+    url = target.replace('{fuzz}', payload)
+    driver.get(url)
