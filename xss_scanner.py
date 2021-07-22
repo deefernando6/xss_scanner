@@ -20,3 +20,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-u', '--url', required=True)
 parser.add_argument('-w', '--wordlist', required=True)
 args = parser.parse_args()
+
+if not '{fuzz}' in args.url:
+    sys.exit("Need {fuzz} parameter !")
