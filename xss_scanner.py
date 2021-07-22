@@ -23,3 +23,6 @@ args = parser.parse_args()
 
 if not '{fuzz}' in args.url:
     sys.exit("Need {fuzz} parameter !")
+else:
+    target = args.url
+wordlist = args.wordlist
