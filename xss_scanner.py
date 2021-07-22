@@ -18,3 +18,5 @@ driver = webdriver.Chrome(executable_path="usr/bin/chromedriver", chrome_options
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-u', '--url', required=True)
+parser.add_argument('-w', '--wordlist', required=True)
+args = parser.parse_args()
