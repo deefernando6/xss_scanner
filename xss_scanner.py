@@ -30,3 +30,10 @@ wordlist = args.wordlist
 for payload in open(wordlist, "r").readlines():
     url = target.replace('{fuzz}', payload)
     driver.get(url)
+	try:
+        WebDriverWait(driver, 3).until(EC.alert_is_present())
+        alert = driver.switch_to_alert
+        alert.accept
+        print("XSs alert accpeted with ", payload)
+    except:
+        print("XSS doesn\'t work with", payload)
