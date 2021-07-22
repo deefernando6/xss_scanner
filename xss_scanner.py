@@ -15,3 +15,6 @@ options.add_argument('--no-sandbox')
 options.add_argument('--log-level=3')
 options.add_argument('--disable-notifications')
 driver = webdriver.Chrome(executable_path="usr/bin/chromedriver", chrome_options=options)
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-u', '--url', required=True)
